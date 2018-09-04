@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:41.881709"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"qlr4emUBXkv-rkSJuQxM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":214,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Location: [/sub_profile/doc/qlr4emUBXkv-rkSJuQxM]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/qlr4emUBXkv-rkSJuQxM
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"qlr4emUBXkv-rkSJuQxM","_version":1,"found":true,"_source":{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:41.881709"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['332']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"e1a5b98f-f6c1-4492-83dd-818c4af96664"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/qlr4emUBXkv-rkSJuQxM/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"qlr4emUBXkv-rkSJuQxM","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":215,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"714aee95-aa8d-85da-6d58-ee6e417888b7\",\"order\":{\"ssn\":\"341991150\"},\"is_deceased\":false,\"is_valid\":false,\"state_issued\":\"Utah\",\"text_response\":\"Many
+      manage wonder area relationship court available build great interview rise can
+      forget course food if floor performance culture clear usually agreement.\",\"year_issued\":2008}","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Many
+      manage wonder area relationship court available build great interview rise can
+      forget course food if floor performance culture clear usually agreement.\",\"issued\":{\"date\":\"2008-01-01T00:00:00\",\"state\":\"Utah\",\"year\":2008},\"ssn\":\"341991150\"}}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/qlr4emUBXkv-rkSJuQxM/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"qlr4emUBXkv-rkSJuQxM","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":216,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1

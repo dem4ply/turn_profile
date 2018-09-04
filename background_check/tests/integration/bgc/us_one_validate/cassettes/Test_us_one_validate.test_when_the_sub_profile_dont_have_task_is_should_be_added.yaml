@@ -1,0 +1,93 @@
+interactions:
+- request:
+    body: '{"source":"two.eat.state","raw_response_str":"{\"catch\":\"NYuCjPoryRUehTTCORpv\",\"several\":97164563.215923,\"finally\":\"ronaldnichols@moreno.org\",\"scientist\":-8640285505577.0,\"five\":\"1977-05-30T02:20:14\",\"probably\":\"gcXxyaKneKebmNmzpfpN\",\"human\":-6058550129.8,\"baby\":\"aNQhBWzEVbhGsVFiyxQD\",\"best\":\"2012-05-26T01:27:22\",\"simply\":0.77841100401179,\"standard\":\"QOBZxluDmFUPIRYDjDvS\",\"dog\":\"https://www.roman-boone.biz/terms/\",\"state\":2461}","response_str":"{\"mention\":3521,\"fact\":\"mQrPBnnBPpFrkQkxBiyY\",\"building\":\"2011-12-26T06:48:13\",\"music\":-226.9059,\"position\":2573,\"lead\":\"1972-09-17T22:13:51\",\"prevent\":\"XySifShGJaOPWtmbOSTI\",\"treatment\":-2032.0,\"about\":\"LSSVdRDYzCBHyQXNnxiD\",\"ever\":95.789157087,\"participant\":\"2012-08-20T12:47:30\",\"company\":\"iVcghHSWbrSjcXvtyPol\",\"impact\":\"http://morris.com/app/search/main/post/\",\"magazine\":4265}","created_at":"2018-08-27T10:40:42.055560"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"rFr4emUBXkv-rkSJuQz5","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":231,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Location: [/sub_profile/doc/rFr4emUBXkv-rkSJuQz5]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/rFr4emUBXkv-rkSJuQz5
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"rFr4emUBXkv-rkSJuQz5","_version":1,"found":true,"_source":{"source":"two.eat.state","raw_response_str":"{\"catch\":\"NYuCjPoryRUehTTCORpv\",\"several\":97164563.215923,\"finally\":\"ronaldnichols@moreno.org\",\"scientist\":-8640285505577.0,\"five\":\"1977-05-30T02:20:14\",\"probably\":\"gcXxyaKneKebmNmzpfpN\",\"human\":-6058550129.8,\"baby\":\"aNQhBWzEVbhGsVFiyxQD\",\"best\":\"2012-05-26T01:27:22\",\"simply\":0.77841100401179,\"standard\":\"QOBZxluDmFUPIRYDjDvS\",\"dog\":\"https://www.roman-boone.biz/terms/\",\"state\":2461}","response_str":"{\"mention\":3521,\"fact\":\"mQrPBnnBPpFrkQkxBiyY\",\"building\":\"2011-12-26T06:48:13\",\"music\":-226.9059,\"position\":2573,\"lead\":\"1972-09-17T22:13:51\",\"prevent\":\"XySifShGJaOPWtmbOSTI\",\"treatment\":-2032.0,\"about\":\"LSSVdRDYzCBHyQXNnxiD\",\"ever\":95.789157087,\"participant\":\"2012-08-20T12:47:30\",\"company\":\"iVcghHSWbrSjcXvtyPol\",\"impact\":\"http://morris.com/app/search/main/post/\",\"magazine\":4265}","created_at":"2018-08-27T10:40:42.055560"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['1064']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"9140871c-ff42-46a6-80cc-cfb92d50c01a"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/rFr4emUBXkv-rkSJuQz5/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"rFr4emUBXkv-rkSJuQz5","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":232,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"f21c3016-5d70-bc46-77fc-8c9771cc6bf0\",\"order\":{\"ssn\":\"705821079\"},\"is_deceased\":false,\"is_valid\":false,\"state_issued\":\"North
+      Dakota\",\"text_response\":\"Low culture meeting hear power quality draw hope
+      any pressure mind thousand what gas light skill free option explain argue.\",\"year_issued\":\"1993\"}","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Low
+      culture meeting hear power quality draw hope any pressure mind thousand what
+      gas light skill free option explain argue.\",\"issued\":{\"date\":\"1993-01-01T00:00:00\",\"state\":\"North
+      Dakota\",\"year\":1993},\"ssn\":\"705821079\"}}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/rFr4emUBXkv-rkSJuQz5/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"rFr4emUBXkv-rkSJuQz5","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":233,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/rFr4emUBXkv-rkSJuQz5
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"rFr4emUBXkv-rkSJuQz5","_version":3,"found":true,"_source":{"source":"two.eat.state","raw_response_str":"{\"order_id\":\"f21c3016-5d70-bc46-77fc-8c9771cc6bf0\",\"order\":{\"ssn\":\"705821079\"},\"is_deceased\":false,\"is_valid\":false,\"state_issued\":\"North
+        Dakota\",\"text_response\":\"Low culture meeting hear power quality draw hope
+        any pressure mind thousand what gas light skill free option explain argue.\",\"year_issued\":\"1993\"}","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Low
+        culture meeting hear power quality draw hope any pressure mind thousand what
+        gas light skill free option explain argue.\",\"issued\":{\"date\":\"1993-01-01T00:00:00\",\"state\":\"North
+        Dakota\",\"year\":1993},\"ssn\":\"705821079\"}}","created_at":"2018-08-27T10:40:42.055560","task_id":"9140871c-ff42-46a6-80cc-cfb92d50c01a"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['929']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1

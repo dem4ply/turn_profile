@@ -1,0 +1,114 @@
+interactions:
+- request:
+    body: '{"source":"resource.senior.born","raw_response_str":"{\"answer\":\"https://walker.com/faq/\",\"cause\":\"qTAKOqOCFboRvgmPVLDP\",\"imagine\":\"uTgawhqBjaroMFOemVQB\",\"artist\":\"gfpVGvCKmRIQiXWlJPoW\",\"next\":\"tammyevans@klein.biz\",\"none\":-361.6583682,\"figure\":\"PfoMdPcEMOFbpLsHsGxD\",\"bad\":\"HjiqsAbFKGjfMyhRWRfT\",\"you\":\"YhWVLBiYunDZodmoxQhg\",\"site\":\"amy93@yahoo.com\"}","response_str":"{\"relate\":\"NRuRMlonlRRLgCOlQtkl\",\"nice\":\"ZqOERrHZLiIIFBvlPWqC\",\"old\":\"nltfEQtsrPNkGMAqlTqx\",\"blood\":\"EnPdsVXbJHZWIMQmYZJs\",\"music\":88.1588396976,\"certain\":\"https://www.garcia.com/\",\"again\":360.556682896681,\"could\":\"tyTtwNuBpjzRLXNawvmQ\",\"free\":\"tnsZpgtSaikTxdhgHfUy\",\"number\":2094}","created_at":"2018-08-27T10:40:42.265613"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/sub_profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sub_profile_12345","_version":37,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":189,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['177']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"meta_sub_profiles":[{"sub_profile_id":"sub_profile_12345","status":"unknown"}]}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":60,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":62,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['172']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":60,"found":true,"_source":{"meta_sub_profiles":[{"sub_profile_id":"sub_profile_12345","status":"unknown"}]}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sub_profile_12345","_version":37,"found":true,"_source":{"source":"resource.senior.born","raw_response_str":"{\"answer\":\"https://walker.com/faq/\",\"cause\":\"qTAKOqOCFboRvgmPVLDP\",\"imagine\":\"uTgawhqBjaroMFOemVQB\",\"artist\":\"gfpVGvCKmRIQiXWlJPoW\",\"next\":\"tammyevans@klein.biz\",\"none\":-361.6583682,\"figure\":\"PfoMdPcEMOFbpLsHsGxD\",\"bad\":\"HjiqsAbFKGjfMyhRWRfT\",\"you\":\"YhWVLBiYunDZodmoxQhg\",\"site\":\"amy93@yahoo.com\"}","response_str":"{\"relate\":\"NRuRMlonlRRLgCOlQtkl\",\"nice\":\"ZqOERrHZLiIIFBvlPWqC\",\"old\":\"nltfEQtsrPNkGMAqlTqx\",\"blood\":\"EnPdsVXbJHZWIMQmYZJs\",\"music\":88.1588396976,\"certain\":\"https://www.garcia.com/\",\"again\":360.556682896681,\"could\":\"tyTtwNuBpjzRLXNawvmQ\",\"free\":\"tnsZpgtSaikTxdhgHfUy\",\"number\":2094}","created_at":"2018-08-27T10:40:42.265613"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['867']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"meta_sub_profiles":[{"sub_profile_id":"sub_profile_12345","status":"unknown"}],"relate":"NRuRMlonlRRLgCOlQtkl","nice":"ZqOERrHZLiIIFBvlPWqC","old":"nltfEQtsrPNkGMAqlTqx","blood":"EnPdsVXbJHZWIMQmYZJs","music":88.1588396976,"certain":"https://www.garcia.com/","again":360.556682896681,"could":"tyTtwNuBpjzRLXNawvmQ","free":"tnsZpgtSaikTxdhgHfUy","number":2094}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/profile/doc/sub_profile_12345?version=60
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":61,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":63,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['172']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":61,"found":true,"_source":{"meta_sub_profiles":[{"sub_profile_id":"sub_profile_12345","status":"unknown"}],"relate":"NRuRMlonlRRLgCOlQtkl","nice":"ZqOERrHZLiIIFBvlPWqC","old":"nltfEQtsrPNkGMAqlTqx","blood":"EnPdsVXbJHZWIMQmYZJs","music":88.1588396976,"certain":"https://www.garcia.com/","again":360.556682896681,"could":"tyTtwNuBpjzRLXNawvmQ","free":"tnsZpgtSaikTxdhgHfUy","number":2094}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['459']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sub_profile_12345","_version":37,"found":true,"_source":{"source":"resource.senior.born","raw_response_str":"{\"answer\":\"https://walker.com/faq/\",\"cause\":\"qTAKOqOCFboRvgmPVLDP\",\"imagine\":\"uTgawhqBjaroMFOemVQB\",\"artist\":\"gfpVGvCKmRIQiXWlJPoW\",\"next\":\"tammyevans@klein.biz\",\"none\":-361.6583682,\"figure\":\"PfoMdPcEMOFbpLsHsGxD\",\"bad\":\"HjiqsAbFKGjfMyhRWRfT\",\"you\":\"YhWVLBiYunDZodmoxQhg\",\"site\":\"amy93@yahoo.com\"}","response_str":"{\"relate\":\"NRuRMlonlRRLgCOlQtkl\",\"nice\":\"ZqOERrHZLiIIFBvlPWqC\",\"old\":\"nltfEQtsrPNkGMAqlTqx\",\"blood\":\"EnPdsVXbJHZWIMQmYZJs\",\"music\":88.1588396976,\"certain\":\"https://www.garcia.com/\",\"again\":360.556682896681,\"could\":\"tyTtwNuBpjzRLXNawvmQ\",\"free\":\"tnsZpgtSaikTxdhgHfUy\",\"number\":2094}","created_at":"2018-08-27T10:40:42.265613"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['867']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1

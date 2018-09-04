@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"source":"bgc.us_one_trace","response_str":"{\"addresses\":[],\"phones\":[]}","created_at":"2018-08-27T10:40:41.390906"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"pVr4emUBXkv-rkSJtwxe","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":211,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:44 GMT']
+      Location: [/sub_profile/doc/pVr4emUBXkv-rkSJtwxe]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/pVr4emUBXkv-rkSJtwxe
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"pVr4emUBXkv-rkSJtwxe","_version":1,"found":true,"_source":{"source":"bgc.us_one_trace","response_str":"{\"addresses\":[],\"phones\":[]}","created_at":"2018-08-27T10:40:41.390906"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['225']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:44 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"342a8cab-a634-47a8-9f40-6cb29c2d8e44"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/pVr4emUBXkv-rkSJtwxe/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"pVr4emUBXkv-rkSJtwxe","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":212,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:44 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"f462aa1e-1189-b58e-4de5-99a8bb7943e8\",\"order\":{\"ssn\":\"104536023\",\"first_name\":\"John\",\"last_name\":\"Williams\"},\"records\":[{\"street\":{\"name\":\"Patricia
+      Villages\",\"number\":\"65255\",\"suffix\":\"Lane\",\"post_direction\":null,\"pre_direction\":null},\"first_name\":\"Kimberly\",\"last_name\":\"Phillips\",\"suffix\":null,\"middle_name\":null,\"verified\":true,\"city\":\"Port
+      Sonyashire\",\"state\":\"PR\",\"county\":null,\"date_first_seen__raw\":{\"month\":\"4\",\"year\":\"1983\"},\"date_first_seen\":\"1983-04-01\",\"date_last_seen__raw\":{\"month\":\"5\",\"year\":\"2015\"},\"date_last_seen\":\"2015-05-01\",\"postal_code\":\"74622\",\"postal_code4\":\"7518\",\"phone_info\":{\"number_is_public\":false,\"phone_number\":\"09136223853\"}}]}","response_str":"{\"addresses\":[{\"city\":\"Port
+      Sonyashire\",\"county\":null,\"state\":\"PR\",\"date_first_seen\":\"1983-04-01\",\"date_last_seen\":\"2015-05-01\",\"first_name\":\"Kimberly\",\"last_name\":\"Phillips\",\"middle_name\":null,\"postal_code\":\"74622\",\"postal_code_4\":\"7518\",\"is_verified\":true,\"street\":\"Patricia
+      Villages\",\"number\":\"65255\",\"post_direction\":null,\"pre_direction\":null,\"suffix\":\"Lane\"}],\"phones\":[{\"number\":\"09136223853\",\"is_public\":false}]}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/pVr4emUBXkv-rkSJtwxe/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"pVr4emUBXkv-rkSJtwxe","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":213,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1

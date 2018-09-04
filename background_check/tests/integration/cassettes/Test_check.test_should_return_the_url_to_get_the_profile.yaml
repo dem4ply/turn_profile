@@ -1,0 +1,170 @@
+interactions:
+- request:
+    body: '{}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/profile/doc
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"oFr4emUBXkv-rkSJUAx4","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":5,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['173']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Location: [/profile/doc/oFr4emUBXkv-rkSJUAx4]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: '{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:15.067563"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"oVr4emUBXkv-rkSJUAyM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":208,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Location: [/sub_profile/doc/oVr4emUBXkv-rkSJUAyM]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: '{"meta_sub_profiles":[{"sub_profile_id":"oVr4emUBXkv-rkSJUAyM","status":"unknown"}]}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/profile/doc/oFr4emUBXkv-rkSJUAx4?version=1
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"oFr4emUBXkv-rkSJUAx4","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":6,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['173']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/oVr4emUBXkv-rkSJUAyM
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"oVr4emUBXkv-rkSJUAyM","_version":1,"found":true,"_source":{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:15.067563"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['332']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"a454f086-1ca1-404e-bb15-bacca843ce7d"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/oVr4emUBXkv-rkSJUAyM/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"oVr4emUBXkv-rkSJUAyM","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":209,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"94719f88-6223-dc33-4801-f18da12def60\",\"order\":{\"ssn\":\"162357097\"},\"is_deceased\":false,\"is_valid\":false,\"state_issued\":\"NV\",\"text_response\":\"Deal
+      laugh himself safe spend somebody trade safe clear produce city present.\",\"year_issued\":\"1974\"}","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Deal
+      laugh himself safe spend somebody trade safe clear produce city present.\",\"issued\":{\"date\":\"1974-01-01T00:00:00\",\"state\":\"NV\",\"year\":1974},\"ssn\":\"162357097\"}}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/oVr4emUBXkv-rkSJUAyM/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"oVr4emUBXkv-rkSJUAyM","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":210,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/profile/doc/oFr4emUBXkv-rkSJUAx4
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"oFr4emUBXkv-rkSJUAx4","_version":2,"found":true,"_source":{"meta_sub_profiles":[{"sub_profile_id":"oVr4emUBXkv-rkSJUAyM","status":"unknown"}]}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['184']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/oVr4emUBXkv-rkSJUAyM
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"oVr4emUBXkv-rkSJUAyM","_version":3,"found":true,"_source":{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Deal
+        laugh himself safe spend somebody trade safe clear produce city present.\",\"issued\":{\"date\":\"1974-01-01T00:00:00\",\"state\":\"NV\",\"year\":1974},\"ssn\":\"162357097\"}}","created_at":"2018-08-27T10:40:15.067563","task_id":"a454f086-1ca1-404e-bb15-bacca843ce7d","raw_response_str":"{\"order_id\":\"94719f88-6223-dc33-4801-f18da12def60\",\"order\":{\"ssn\":\"162357097\"},\"is_deceased\":false,\"is_valid\":false,\"state_issued\":\"NV\",\"text_response\":\"Deal
+        laugh himself safe spend somebody trade safe clear produce city present.\",\"year_issued\":\"1974\"}"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['823']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"meta_sub_profiles":[{"sub_profile_id":"oVr4emUBXkv-rkSJUAyM","status":"unknown"}],"ssn_trace":{"is_deceased":false,"is_random":false,"is_valid":false,"human_message":"Deal
+      laugh himself safe spend somebody trade safe clear produce city present.","issued":{"date":"1974-01-01T00:00:00","state":"NV","year":1974},"ssn":"162357097"}}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/profile/doc/oFr4emUBXkv-rkSJUAx4?version=2
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"oFr4emUBXkv-rkSJUAx4","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":7,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['173']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/profile/doc/oFr4emUBXkv-rkSJUAx4
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"oFr4emUBXkv-rkSJUAx4","_version":3,"found":true,"_source":{"meta_sub_profiles":[{"sub_profile_id":"oVr4emUBXkv-rkSJUAyM","status":"unknown"}],"ssn_trace":{"is_deceased":false,"is_random":false,"is_valid":false,"human_message":"Deal
+        laugh himself safe spend somebody trade safe clear produce city present.","issued":{"date":"1974-01-01T00:00:00","state":"NV","year":1974},"ssn":"162357097"}}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['432']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1

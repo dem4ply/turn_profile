@@ -1,0 +1,87 @@
+interactions:
+- request:
+    body: '{"source":"next.together.factor","created_at":"2018-08-27T10:40:41.614244"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"p1r4emUBXkv-rkSJuAxA","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":238,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Location: [/sub_profile/doc/p1r4emUBXkv-rkSJuAxA]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/p1r4emUBXkv-rkSJuAxA
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"p1r4emUBXkv-rkSJuAxA","_version":1,"found":true,"_source":{"source":"next.together.factor","created_at":"2018-08-27T10:40:41.614244"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"1996f313-d22b-491f-a4cb-904f0365895f"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/p1r4emUBXkv-rkSJuAxA/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"p1r4emUBXkv-rkSJuAxA","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":239,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"e6cb7117-e215-0d79-0eb3-99c936599b1d\",\"order\":{\"ssn\":\"582425424\",\"first_name\":\"Anne\",\"last_name\":\"Williams\"},\"records\":[{\"street\":{\"name\":\"Spencer
+      Forks\",\"number\":\"4729\",\"suffix\":\"Wells\",\"post_direction\":null,\"pre_direction\":null},\"first_name\":\"Brittany\",\"last_name\":\"Ball\",\"suffix\":null,\"middle_name\":null,\"verified\":false,\"city\":\"Johnsonville\",\"state\":\"LA\",\"county\":null,\"date_first_seen__raw\":{\"month\":\"1\",\"year\":\"2008\"},\"date_first_seen\":\"2008-01-01\",\"date_last_seen__raw\":{\"month\":\"6\",\"year\":\"2007\"},\"date_last_seen\":\"2007-06-01\",\"postal_code\":\"54716\",\"postal_code4\":\"6861\",\"phone_info\":{\"number_is_public\":true,\"phone_number\":\"935-712-0729x9143\"}}]}","response_str":"{\"addresses\":[{\"city\":\"Johnsonville\",\"county\":null,\"state\":\"LA\",\"date_first_seen\":\"2008-01-01\",\"date_last_seen\":\"2007-06-01\",\"first_name\":\"Brittany\",\"last_name\":\"Ball\",\"middle_name\":null,\"postal_code\":\"54716\",\"postal_code_4\":\"6861\",\"is_verified\":false,\"street\":\"Spencer
+      Forks\",\"number\":\"4729\",\"post_direction\":null,\"pre_direction\":null,\"suffix\":\"Wells\"}],\"phones\":[{\"number\":\"935-712-0729x9143\",\"is_public\":true}]}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/p1r4emUBXkv-rkSJuAxA/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"p1r4emUBXkv-rkSJuAxA","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":240,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/p1r4emUBXkv-rkSJuAxA
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"p1r4emUBXkv-rkSJuAxA","_version":3,"found":true,"_source":{"source":"next.together.factor","created_at":"2018-08-27T10:40:41.614244","task_id":"1996f313-d22b-491f-a4cb-904f0365895f","raw_response_str":"{\"order_id\":\"e6cb7117-e215-0d79-0eb3-99c936599b1d\",\"order\":{\"ssn\":\"582425424\",\"first_name\":\"Anne\",\"last_name\":\"Williams\"},\"records\":[{\"street\":{\"name\":\"Spencer
+        Forks\",\"number\":\"4729\",\"suffix\":\"Wells\",\"post_direction\":null,\"pre_direction\":null},\"first_name\":\"Brittany\",\"last_name\":\"Ball\",\"suffix\":null,\"middle_name\":null,\"verified\":false,\"city\":\"Johnsonville\",\"state\":\"LA\",\"county\":null,\"date_first_seen__raw\":{\"month\":\"1\",\"year\":\"2008\"},\"date_first_seen\":\"2008-01-01\",\"date_last_seen__raw\":{\"month\":\"6\",\"year\":\"2007\"},\"date_last_seen\":\"2007-06-01\",\"postal_code\":\"54716\",\"postal_code4\":\"6861\",\"phone_info\":{\"number_is_public\":true,\"phone_number\":\"935-712-0729x9143\"}}]}","response_str":"{\"addresses\":[{\"city\":\"Johnsonville\",\"county\":null,\"state\":\"LA\",\"date_first_seen\":\"2008-01-01\",\"date_last_seen\":\"2007-06-01\",\"first_name\":\"Brittany\",\"last_name\":\"Ball\",\"middle_name\":null,\"postal_code\":\"54716\",\"postal_code_4\":\"6861\",\"is_verified\":false,\"street\":\"Spencer
+        Forks\",\"number\":\"4729\",\"post_direction\":null,\"pre_direction\":null,\"suffix\":\"Wells\"}],\"phones\":[{\"number\":\"935-712-0729x9143\",\"is_public\":true}]}"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['1520']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1

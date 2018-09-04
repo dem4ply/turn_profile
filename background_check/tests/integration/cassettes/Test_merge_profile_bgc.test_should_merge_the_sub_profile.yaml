@@ -1,0 +1,207 @@
+interactions:
+- request:
+    body: '{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:42.439448"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sFr4emUBXkv-rkSJuwx5","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":217,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Location: [/sub_profile/doc/sFr4emUBXkv-rkSJuwx5]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/sFr4emUBXkv-rkSJuwx5
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sFr4emUBXkv-rkSJuwx5","_version":1,"found":true,"_source":{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:42.439448"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['332']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"1d37a0e9-5dc4-4a58-8058-084bb576c59f"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/sFr4emUBXkv-rkSJuwx5/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sFr4emUBXkv-rkSJuwx5","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":218,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"84b8782d-e287-2f47-7c38-a3731a2b5c71\",\"order\":{\"ssn\":\"718333663\"},\"is_deceased\":true,\"is_valid\":true,\"state_issued\":\"Tennessee\",\"text_response\":\"Everyone
+      maintain physical nice rate explain nature social upon wife leg share political.\",\"year_issued\":null}","response_str":"{\"ssn_trace\":{\"is_deceased\":true,\"is_random\":false,\"is_valid\":true,\"human_message\":\"Everyone
+      maintain physical nice rate explain nature social upon wife leg share political.\",\"issued\":{\"date\":null,\"state\":\"Tennessee\",\"year\":null},\"ssn\":\"718333663\"}}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/sFr4emUBXkv-rkSJuwx5/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sFr4emUBXkv-rkSJuwx5","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":219,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/sFr4emUBXkv-rkSJuwx5
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sFr4emUBXkv-rkSJuwx5","_version":3,"found":true,"_source":{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":true,\"is_random\":false,\"is_valid\":true,\"human_message\":\"Everyone
+        maintain physical nice rate explain nature social upon wife leg share political.\",\"issued\":{\"date\":null,\"state\":\"Tennessee\",\"year\":null},\"ssn\":\"718333663\"}}","created_at":"2018-08-27T10:40:42.439448","task_id":"1d37a0e9-5dc4-4a58-8058-084bb576c59f","raw_response_str":"{\"order_id\":\"84b8782d-e287-2f47-7c38-a3731a2b5c71\",\"order\":{\"ssn\":\"718333663\"},\"is_deceased\":true,\"is_valid\":true,\"state_issued\":\"Tennessee\",\"text_response\":\"Everyone
+        maintain physical nice rate explain nature social upon wife leg share political.\",\"year_issued\":null}"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['834']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"raw_response_str":"{\"order_id\":\"84b8782d-e287-2f47-7c38-a3731a2b5c71\",\"order\":{\"ssn\":\"718333663\"},\"is_deceased\":true,\"is_valid\":true,\"state_issued\":\"Tennessee\",\"text_response\":\"Everyone
+      maintain physical nice rate explain nature social upon wife leg share political.\",\"year_issued\":null}","response_str":"{\"ssn_trace\":{\"is_deceased\":true,\"is_random\":false,\"is_valid\":true,\"human_message\":\"Everyone
+      maintain physical nice rate explain nature social upon wife leg share political.\",\"issued\":{\"date\":null,\"state\":\"Tennessee\",\"year\":null},\"ssn\":\"718333663\"}}","source":"bgc.us_one_validate","created_at":"2018-08-27T10:40:42.439448","task_id":"1d37a0e9-5dc4-4a58-8058-084bb576c59f"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/sub_profile/doc/bgc_us_one_validate_123456789
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"bgc_us_one_validate_123456789","_version":17,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":249,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['189']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"meta_sub_profiles":[{"sub_profile_id":"bgc_us_one_validate_123456789","status":"unknown"}]}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":62,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":64,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['172']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":62,"found":true,"_source":{"meta_sub_profiles":[{"sub_profile_id":"bgc_us_one_validate_123456789","status":"unknown"}]}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['191']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/bgc_us_one_validate_123456789
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"bgc_us_one_validate_123456789","_version":17,"found":true,"_source":{"raw_response_str":"{\"order_id\":\"84b8782d-e287-2f47-7c38-a3731a2b5c71\",\"order\":{\"ssn\":\"718333663\"},\"is_deceased\":true,\"is_valid\":true,\"state_issued\":\"Tennessee\",\"text_response\":\"Everyone
+        maintain physical nice rate explain nature social upon wife leg share political.\",\"year_issued\":null}","response_str":"{\"ssn_trace\":{\"is_deceased\":true,\"is_random\":false,\"is_valid\":true,\"human_message\":\"Everyone
+        maintain physical nice rate explain nature social upon wife leg share political.\",\"issued\":{\"date\":null,\"state\":\"Tennessee\",\"year\":null},\"ssn\":\"718333663\"}}","source":"bgc.us_one_validate","created_at":"2018-08-27T10:40:42.439448","task_id":"1d37a0e9-5dc4-4a58-8058-084bb576c59f"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['844']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"meta_sub_profiles":[{"sub_profile_id":"bgc_us_one_validate_123456789","status":"unknown"}],"ssn_trace":{"is_deceased":true,"is_random":false,"is_valid":true,"human_message":"Everyone
+      maintain physical nice rate explain nature social upon wife leg share political.","issued":{"state":"Tennessee"},"ssn":"718333663"}}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/profile/doc/sub_profile_12345?version=62
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":63,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":65,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['172']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":63,"found":true,"_source":{"meta_sub_profiles":[{"sub_profile_id":"bgc_us_one_validate_123456789","status":"unknown"}],"ssn_trace":{"is_deceased":true,"is_random":false,"is_valid":true,"human_message":"Everyone
+        maintain physical nice rate explain nature social upon wife leg share political.","issued":{"state":"Tennessee"},"ssn":"718333663"}}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['415']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/bgc_us_one_validate_123456789
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"bgc_us_one_validate_123456789","_version":17,"found":true,"_source":{"raw_response_str":"{\"order_id\":\"84b8782d-e287-2f47-7c38-a3731a2b5c71\",\"order\":{\"ssn\":\"718333663\"},\"is_deceased\":true,\"is_valid\":true,\"state_issued\":\"Tennessee\",\"text_response\":\"Everyone
+        maintain physical nice rate explain nature social upon wife leg share political.\",\"year_issued\":null}","response_str":"{\"ssn_trace\":{\"is_deceased\":true,\"is_random\":false,\"is_valid\":true,\"human_message\":\"Everyone
+        maintain physical nice rate explain nature social upon wife leg share political.\",\"issued\":{\"date\":null,\"state\":\"Tennessee\",\"year\":null},\"ssn\":\"718333663\"}}","source":"bgc.us_one_validate","created_at":"2018-08-27T10:40:42.439448","task_id":"1d37a0e9-5dc4-4a58-8058-084bb576c59f"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['844']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1

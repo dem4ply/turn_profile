@@ -1,0 +1,263 @@
+interactions:
+- request:
+    body: '{}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/profile/doc
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"olr4emUBXkv-rkSJUQyS","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":2,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['173']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Location: [/profile/doc/olr4emUBXkv-rkSJUQyS]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: '{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:15.348800"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"o1r4emUBXkv-rkSJUQyk","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":228,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Location: [/sub_profile/doc/o1r4emUBXkv-rkSJUQyk]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: '{"source":"bgc.us_one_trace","response_str":"{\"addresses\":[],\"phones\":[]}","created_at":"2018-08-27T10:40:15.364802"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"pFr4emUBXkv-rkSJUQy1","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":183,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Location: [/sub_profile/doc/pFr4emUBXkv-rkSJUQy1]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: '{"meta_sub_profiles":[{"sub_profile_id":"o1r4emUBXkv-rkSJUQyk","status":"unknown"},{"sub_profile_id":"pFr4emUBXkv-rkSJUQy1","status":"unknown"}]}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/profile/doc/olr4emUBXkv-rkSJUQyS?version=1
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"olr4emUBXkv-rkSJUQyS","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":3,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['173']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/o1r4emUBXkv-rkSJUQyk
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"o1r4emUBXkv-rkSJUQyk","_version":1,"found":true,"_source":{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:15.348800"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['332']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"fb951f7e-e2f6-429a-b60c-beeb69e0c38a"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/o1r4emUBXkv-rkSJUQyk/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"o1r4emUBXkv-rkSJUQyk","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":229,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"e2b414c6-fbf2-01f9-02fb-0c7e02e213cc\",\"order\":{\"ssn\":\"733117187\"},\"is_deceased\":true,\"is_valid\":false,\"state_issued\":\"FM\",\"text_response\":\"Type
+      smile key project cultural car side body can little city civil natural treat
+      though kid region rule word sense federal weight own or increase run.\",\"year_issued\":null}","response_str":"{\"ssn_trace\":{\"is_deceased\":true,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Type
+      smile key project cultural car side body can little city civil natural treat
+      though kid region rule word sense federal weight own or increase run.\",\"issued\":{\"date\":null,\"state\":\"FM\",\"year\":null},\"ssn\":\"733117187\"}}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/o1r4emUBXkv-rkSJUQyk/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"o1r4emUBXkv-rkSJUQyk","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":230,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/pFr4emUBXkv-rkSJUQy1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"pFr4emUBXkv-rkSJUQy1","_version":1,"found":true,"_source":{"source":"bgc.us_one_trace","response_str":"{\"addresses\":[],\"phones\":[]}","created_at":"2018-08-27T10:40:15.364802"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['225']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:18 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"aaedbff4-cb39-4a26-91e4-35d501f3202c"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/pFr4emUBXkv-rkSJUQy1/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"pFr4emUBXkv-rkSJUQy1","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":184,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:19 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"ecc4d679-ef9d-9b30-7d5d-7c05a22331b8\",\"order\":{\"ssn\":\"853146484\",\"first_name\":\"Daniel\",\"last_name\":\"Ford\"},\"records\":[{\"street\":{\"name\":\"Peters
+      Mews\",\"number\":\"525\",\"suffix\":\"Shoal\",\"post_direction\":null,\"pre_direction\":null},\"first_name\":\"Janice\",\"last_name\":\"Brown\",\"suffix\":null,\"middle_name\":null,\"verified\":false,\"city\":\"Fullerchester\",\"state\":\"VA\",\"county\":null,\"date_first_seen__raw\":{\"month\":\"4\",\"year\":\"2007\"},\"date_first_seen\":\"2007-04-01\",\"date_last_seen__raw\":{\"month\":\"5\",\"year\":\"1987\"},\"date_last_seen\":\"1987-05-01\",\"postal_code\":\"61949\",\"postal_code4\":\"7634\",\"phone_info\":{\"number_is_public\":false,\"phone_number\":\"(079)559-9854\"}}]}","response_str":"{\"addresses\":[{\"city\":\"Fullerchester\",\"county\":null,\"state\":\"VA\",\"date_first_seen\":\"2007-04-01\",\"date_last_seen\":\"1987-05-01\",\"first_name\":\"Janice\",\"last_name\":\"Brown\",\"middle_name\":null,\"postal_code\":\"61949\",\"postal_code_4\":\"7634\",\"is_verified\":false,\"street\":\"Peters
+      Mews\",\"number\":\"525\",\"post_direction\":null,\"pre_direction\":null,\"suffix\":\"Shoal\"}],\"phones\":[{\"number\":\"(079)559-9854\",\"is_public\":false}]}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/pFr4emUBXkv-rkSJUQy1/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"pFr4emUBXkv-rkSJUQy1","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":185,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:19 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/profile/doc/olr4emUBXkv-rkSJUQyS
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"olr4emUBXkv-rkSJUQyS","_version":2,"found":true,"_source":{"meta_sub_profiles":[{"sub_profile_id":"o1r4emUBXkv-rkSJUQyk","status":"unknown"},{"sub_profile_id":"pFr4emUBXkv-rkSJUQy1","status":"unknown"}]}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['245']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:19 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/o1r4emUBXkv-rkSJUQyk
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"o1r4emUBXkv-rkSJUQyk","_version":3,"found":true,"_source":{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":true,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Type
+        smile key project cultural car side body can little city civil natural treat
+        though kid region rule word sense federal weight own or increase run.\",\"issued\":{\"date\":null,\"state\":\"FM\",\"year\":null},\"ssn\":\"733117187\"}}","created_at":"2018-08-27T10:40:15.348800","task_id":"fb951f7e-e2f6-429a-b60c-beeb69e0c38a","raw_response_str":"{\"order_id\":\"e2b414c6-fbf2-01f9-02fb-0c7e02e213cc\",\"order\":{\"ssn\":\"733117187\"},\"is_deceased\":true,\"is_valid\":false,\"state_issued\":\"FM\",\"text_response\":\"Type
+        smile key project cultural car side body can little city civil natural treat
+        though kid region rule word sense federal weight own or increase run.\",\"year_issued\":null}"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['946']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:19 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/pFr4emUBXkv-rkSJUQy1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"pFr4emUBXkv-rkSJUQy1","_version":3,"found":true,"_source":{"source":"bgc.us_one_trace","response_str":"{\"addresses\":[{\"city\":\"Fullerchester\",\"county\":null,\"state\":\"VA\",\"date_first_seen\":\"2007-04-01\",\"date_last_seen\":\"1987-05-01\",\"first_name\":\"Janice\",\"last_name\":\"Brown\",\"middle_name\":null,\"postal_code\":\"61949\",\"postal_code_4\":\"7634\",\"is_verified\":false,\"street\":\"Peters
+        Mews\",\"number\":\"525\",\"post_direction\":null,\"pre_direction\":null,\"suffix\":\"Shoal\"}],\"phones\":[{\"number\":\"(079)559-9854\",\"is_public\":false}]}","created_at":"2018-08-27T10:40:15.364802","task_id":"aaedbff4-cb39-4a26-91e4-35d501f3202c","raw_response_str":"{\"order_id\":\"ecc4d679-ef9d-9b30-7d5d-7c05a22331b8\",\"order\":{\"ssn\":\"853146484\",\"first_name\":\"Daniel\",\"last_name\":\"Ford\"},\"records\":[{\"street\":{\"name\":\"Peters
+        Mews\",\"number\":\"525\",\"suffix\":\"Shoal\",\"post_direction\":null,\"pre_direction\":null},\"first_name\":\"Janice\",\"last_name\":\"Brown\",\"suffix\":null,\"middle_name\":null,\"verified\":false,\"city\":\"Fullerchester\",\"state\":\"VA\",\"county\":null,\"date_first_seen__raw\":{\"month\":\"4\",\"year\":\"2007\"},\"date_first_seen\":\"2007-04-01\",\"date_last_seen__raw\":{\"month\":\"5\",\"year\":\"1987\"},\"date_last_seen\":\"1987-05-01\",\"postal_code\":\"61949\",\"postal_code4\":\"7634\",\"phone_info\":{\"number_is_public\":false,\"phone_number\":\"(079)559-9854\"}}]}"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['1502']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:19 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"meta_sub_profiles":[{"sub_profile_id":"o1r4emUBXkv-rkSJUQyk","status":"unknown"},{"sub_profile_id":"pFr4emUBXkv-rkSJUQy1","status":"unknown"}],"ssn_trace":{"is_deceased":true,"is_random":false,"is_valid":false,"human_message":"Type
+      smile key project cultural car side body can little city civil natural treat
+      though kid region rule word sense federal weight own or increase run.","issued":{"state":"FM"},"ssn":"733117187"},"addresses":[{"city":"Fullerchester","county":null,"state":"VA","date_first_seen":"2007-04-01","date_last_seen":"1987-05-01","first_name":"Janice","last_name":"Brown","middle_name":null,"postal_code":"61949","postal_code_4":"7634","is_verified":false,"street":"Peters
+      Mews","number":"525","post_direction":null,"pre_direction":null,"suffix":"Shoal"}],"phones":[{"number":"(079)559-9854","is_public":false}]}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/profile/doc/olr4emUBXkv-rkSJUQyS?version=2
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"olr4emUBXkv-rkSJUQyS","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":4,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['173']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:19 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/profile/doc/olr4emUBXkv-rkSJUQyS
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"olr4emUBXkv-rkSJUQyS","_version":3,"found":true,"_source":{"meta_sub_profiles":[{"sub_profile_id":"o1r4emUBXkv-rkSJUQyk","status":"unknown"},{"sub_profile_id":"pFr4emUBXkv-rkSJUQy1","status":"unknown"}],"ssn_trace":{"is_deceased":true,"is_random":false,"is_valid":false,"human_message":"Type
+        smile key project cultural car side body can little city civil natural treat
+        though kid region rule word sense federal weight own or increase run.","issued":{"state":"FM"},"ssn":"733117187"},"addresses":[{"city":"Fullerchester","county":null,"state":"VA","date_first_seen":"2007-04-01","date_last_seen":"1987-05-01","first_name":"Janice","last_name":"Brown","middle_name":null,"postal_code":"61949","postal_code_4":"7634","is_verified":false,"street":"Peters
+        Mews","number":"525","post_direction":null,"pre_direction":null,"suffix":"Shoal"}],"phones":[{"number":"(079)559-9854","is_public":false}]}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['932']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:19 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1

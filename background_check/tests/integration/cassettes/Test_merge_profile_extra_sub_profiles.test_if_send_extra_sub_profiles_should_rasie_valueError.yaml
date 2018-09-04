@@ -1,0 +1,50 @@
+interactions:
+- request:
+    body: '{"source":"employee.fear.cultural","raw_response_str":"{\"write\":\"xAkgZDzAITmyQysWyDRs\",\"under\":275,\"consider\":\"ictKKermTtGPNBcHmDxX\",\"growth\":9753,\"interview\":\"FxqUzdieCTcLwYulhIpC\",\"store\":875,\"clear\":\"mlrQPfKWEVmZYoDMLydt\",\"resource\":\"ucEDpWPCBsDBzyWKvWhF\",\"over\":\"UizeDnKyHnWCPhflbywy\",\"series\":\"HtAWDaIqRQKIlbZDqexQ\",\"know\":5275,\"voice\":\"NvYgcreRpmoJGNFFdcOg\",\"why\":-44323540330807.5}","response_str":"{\"dog\":\"xhines@coleman-hurst.com\",\"bed\":359.73149,\"direction\":-406.59,\"there\":516576859675738.0,\"purpose\":\"1993-03-05T07:28:09\",\"network\":177,\"international\":\"XLCnBcUlWGBFqrVzMjmM\",\"continue\":766769.0}","created_at":"2018-08-27T10:40:42.983442"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/sub_profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sub_profile_12345","_version":38,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":193,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['177']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"meta_sub_profiles":[{"sub_profile_id":"sub_profile_12345","status":"unknown"}]}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":66,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":68,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['172']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":66,"found":true,"_source":{"meta_sub_profiles":[{"sub_profile_id":"sub_profile_12345","status":"unknown"}]}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1

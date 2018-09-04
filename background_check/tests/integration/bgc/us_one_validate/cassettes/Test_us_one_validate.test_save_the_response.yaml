@@ -1,0 +1,87 @@
+interactions:
+- request:
+    body: '{"source":"lay.mention.owner","created_at":"2018-08-27T10:40:41.946828"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"q1r4emUBXkv-rkSJuQyM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":244,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Location: [/sub_profile/doc/q1r4emUBXkv-rkSJuQyM]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/q1r4emUBXkv-rkSJuQyM
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"q1r4emUBXkv-rkSJuQyM","_version":1,"found":true,"_source":{"source":"lay.mention.owner","created_at":"2018-08-27T10:40:41.946828"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['176']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"52e88b3d-945c-4784-8b64-1aa994c87dd4"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/q1r4emUBXkv-rkSJuQyM/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"q1r4emUBXkv-rkSJuQyM","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":245,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"e2b8721d-0ab5-6fcc-7ec5-b227fe8fa82a\",\"order\":{\"ssn\":\"425249587\"},\"is_deceased\":false,\"is_valid\":false,\"state_issued\":null,\"text_response\":\"Attention
+      school low identify knowledge him arm fly but rich board never place adult.\",\"year_issued\":null}","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Attention
+      school low identify knowledge him arm fly but rich board never place adult.\",\"issued\":{\"date\":null,\"state\":null,\"year\":null},\"ssn\":\"425249587\"}}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/q1r4emUBXkv-rkSJuQyM/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"q1r4emUBXkv-rkSJuQyM","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":246,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/q1r4emUBXkv-rkSJuQyM
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"q1r4emUBXkv-rkSJuQyM","_version":3,"found":true,"_source":{"source":"lay.mention.owner","created_at":"2018-08-27T10:40:41.946828","task_id":"52e88b3d-945c-4784-8b64-1aa994c87dd4","raw_response_str":"{\"order_id\":\"e2b8721d-0ab5-6fcc-7ec5-b227fe8fa82a\",\"order\":{\"ssn\":\"425249587\"},\"is_deceased\":false,\"is_valid\":false,\"state_issued\":null,\"text_response\":\"Attention
+        school low identify knowledge him arm fly but rich board never place adult.\",\"year_issued\":null}","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Attention
+        school low identify knowledge him arm fly but rich board never place adult.\",\"issued\":{\"date\":null,\"state\":null,\"year\":null},\"ssn\":\"425249587\"}}"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['810']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1

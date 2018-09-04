@@ -1,0 +1,71 @@
+interactions:
+- request:
+    body: '{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:41.819431"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"qVr4emUBXkv-rkSJuQwM","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":186,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Location: [/sub_profile/doc/qVr4emUBXkv-rkSJuQwM]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/qVr4emUBXkv-rkSJuQwM
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"qVr4emUBXkv-rkSJuQwM","_version":1,"found":true,"_source":{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:41.819431"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['332']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"f5f44ec8-2d7b-45b3-a71b-1634e251e8f8"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/qVr4emUBXkv-rkSJuQwM/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"qVr4emUBXkv-rkSJuQwM","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":187,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"277213f5-287a-73b7-1ac4-0936e2e46bee\",\"order\":{\"ssn\":\"387156413\"},\"is_deceased\":false,\"is_valid\":true,\"state_issued\":null,\"text_response\":\"Customer
+      face hold friend office know save politics grow floor follow save page house
+      occur guess administration right why five.\",\"year_issued\":1984}","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_random\":false,\"is_valid\":true,\"human_message\":\"Customer
+      face hold friend office know save politics grow floor follow save page house
+      occur guess administration right why five.\",\"issued\":{\"date\":\"1984-01-01T00:00:00\",\"state\":null,\"year\":1984},\"ssn\":\"387156413\"}}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/qVr4emUBXkv-rkSJuQwM/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"qVr4emUBXkv-rkSJuQwM","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":188,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:45 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1

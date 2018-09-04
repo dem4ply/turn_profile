@@ -1,0 +1,332 @@
+interactions:
+- request:
+    body: '{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:42.640362"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sVr4emUBXkv-rkSJvAxB","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":250,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Location: [/sub_profile/doc/sVr4emUBXkv-rkSJvAxB]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/sVr4emUBXkv-rkSJvAxB
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sVr4emUBXkv-rkSJvAxB","_version":1,"found":true,"_source":{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":false,\"is_valid\":false,\"human_message\":\"\",\"issued\":{\"state\":\"\",\"year\":null},\"ssn\":\"\"}}","created_at":"2018-08-27T10:40:42.640362"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['332']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"1d0b43c0-c100-40fe-a4c9-1d991ddb49fd"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/sVr4emUBXkv-rkSJvAxB/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sVr4emUBXkv-rkSJvAxB","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":251,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"f674a66a-45c1-d265-fa4a-25b43ea79596\",\"order\":{\"ssn\":\"549095763\"},\"is_deceased\":true,\"is_valid\":false,\"state_issued\":\"Ohio\",\"text_response\":\"Yeah
+      budget beyond learn apply institution enough we decade occur her production
+      test executive medical under.\",\"year_issued\":null}","response_str":"{\"ssn_trace\":{\"is_deceased\":true,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Yeah
+      budget beyond learn apply institution enough we decade occur her production
+      test executive medical under.\",\"issued\":{\"date\":null,\"state\":\"Ohio\",\"year\":null},\"ssn\":\"549095763\"}}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/sVr4emUBXkv-rkSJvAxB/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sVr4emUBXkv-rkSJvAxB","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":252,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/sVr4emUBXkv-rkSJvAxB
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"sVr4emUBXkv-rkSJvAxB","_version":3,"found":true,"_source":{"source":"bgc.us_one_validate","response_str":"{\"ssn_trace\":{\"is_deceased\":true,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Yeah
+        budget beyond learn apply institution enough we decade occur her production
+        test executive medical under.\",\"issued\":{\"date\":null,\"state\":\"Ohio\",\"year\":null},\"ssn\":\"549095763\"}}","created_at":"2018-08-27T10:40:42.640362","task_id":"1d0b43c0-c100-40fe-a4c9-1d991ddb49fd","raw_response_str":"{\"order_id\":\"f674a66a-45c1-d265-fa4a-25b43ea79596\",\"order\":{\"ssn\":\"549095763\"},\"is_deceased\":true,\"is_valid\":false,\"state_issued\":\"Ohio\",\"text_response\":\"Yeah
+        budget beyond learn apply institution enough we decade occur her production
+        test executive medical under.\",\"year_issued\":null}"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['868']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"raw_response_str":"{\"order_id\":\"f674a66a-45c1-d265-fa4a-25b43ea79596\",\"order\":{\"ssn\":\"549095763\"},\"is_deceased\":true,\"is_valid\":false,\"state_issued\":\"Ohio\",\"text_response\":\"Yeah
+      budget beyond learn apply institution enough we decade occur her production
+      test executive medical under.\",\"year_issued\":null}","response_str":"{\"ssn_trace\":{\"is_deceased\":true,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Yeah
+      budget beyond learn apply institution enough we decade occur her production
+      test executive medical under.\",\"issued\":{\"date\":null,\"state\":\"Ohio\",\"year\":null},\"ssn\":\"549095763\"}}","source":"bgc.us_one_validate","created_at":"2018-08-27T10:40:42.640362","task_id":"1d0b43c0-c100-40fe-a4c9-1d991ddb49fd"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/sub_profile/doc/bgc_us_one_validate_123456789
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"bgc_us_one_validate_123456789","_version":18,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":253,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['189']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"source":"bgc.us_one_trace","response_str":"{\"addresses\":[],\"phones\":[]}","created_at":"2018-08-27T10:40:42.739283"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"slr4emUBXkv-rkSJvAyj","_version":1,"result":"created","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":190,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Location: [/sub_profile/doc/slr4emUBXkv-rkSJvAyj]
+      Server: [nginx/1.12.2]
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/slr4emUBXkv-rkSJvAyj
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"slr4emUBXkv-rkSJvAyj","_version":1,"found":true,"_source":{"source":"bgc.us_one_trace","response_str":"{\"addresses\":[],\"phones\":[]}","created_at":"2018-08-27T10:40:42.739283"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['225']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"task_id":"7a341a8a-8b0f-49df-9fc8-265535b941c4"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/slr4emUBXkv-rkSJvAyj/_update?refresh=false&version=1
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"slr4emUBXkv-rkSJvAyj","_version":2,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":191,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"doc":{"raw_response_str":"{\"order_id\":\"031f435f-208e-9dee-1281-3f6641e31711\",\"order\":{\"ssn\":\"291644989\",\"first_name\":\"Matthew\",\"last_name\":\"Vega\"},\"records\":[{\"street\":{\"name\":\"James
+      View\",\"number\":\"674\",\"suffix\":\"Summit\",\"post_direction\":null,\"pre_direction\":null},\"first_name\":\"Danielle\",\"last_name\":\"Vaughn\",\"suffix\":null,\"middle_name\":null,\"verified\":true,\"city\":\"West
+      Mckenzietown\",\"state\":\"IA\",\"county\":null,\"date_first_seen__raw\":{\"month\":\"2\",\"year\":\"2000\"},\"date_first_seen\":\"2000-02-01\",\"date_last_seen__raw\":{\"month\":\"3\",\"year\":\"1991\"},\"date_last_seen\":\"1991-03-01\",\"postal_code\":\"31339\",\"postal_code4\":\"9812\",\"phone_info\":{\"number_is_public\":false,\"phone_number\":\"1-344-008-8583x2559\"}}]}","response_str":"{\"addresses\":[{\"city\":\"West
+      Mckenzietown\",\"county\":null,\"state\":\"IA\",\"date_first_seen\":\"2000-02-01\",\"date_last_seen\":\"1991-03-01\",\"first_name\":\"Danielle\",\"last_name\":\"Vaughn\",\"middle_name\":null,\"postal_code\":\"31339\",\"postal_code_4\":\"9812\",\"is_verified\":true,\"street\":\"James
+      View\",\"number\":\"674\",\"post_direction\":null,\"pre_direction\":null,\"suffix\":\"Summit\"}],\"phones\":[{\"number\":\"1-344-008-8583x2559\",\"is_public\":false}]}"},"doc_as_upsert":false,"detect_noop":true}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: POST
+    uri: http://waifus/sub_profile/doc/slr4emUBXkv-rkSJvAyj/_update?refresh=false&version=2
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"slr4emUBXkv-rkSJvAyj","_version":3,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":192,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['179']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/slr4emUBXkv-rkSJvAyj
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"slr4emUBXkv-rkSJvAyj","_version":3,"found":true,"_source":{"source":"bgc.us_one_trace","response_str":"{\"addresses\":[{\"city\":\"West
+        Mckenzietown\",\"county\":null,\"state\":\"IA\",\"date_first_seen\":\"2000-02-01\",\"date_last_seen\":\"1991-03-01\",\"first_name\":\"Danielle\",\"last_name\":\"Vaughn\",\"middle_name\":null,\"postal_code\":\"31339\",\"postal_code_4\":\"9812\",\"is_verified\":true,\"street\":\"James
+        View\",\"number\":\"674\",\"post_direction\":null,\"pre_direction\":null,\"suffix\":\"Summit\"}],\"phones\":[{\"number\":\"1-344-008-8583x2559\",\"is_public\":false}]}","created_at":"2018-08-27T10:40:42.739283","task_id":"7a341a8a-8b0f-49df-9fc8-265535b941c4","raw_response_str":"{\"order_id\":\"031f435f-208e-9dee-1281-3f6641e31711\",\"order\":{\"ssn\":\"291644989\",\"first_name\":\"Matthew\",\"last_name\":\"Vega\"},\"records\":[{\"street\":{\"name\":\"James
+        View\",\"number\":\"674\",\"suffix\":\"Summit\",\"post_direction\":null,\"pre_direction\":null},\"first_name\":\"Danielle\",\"last_name\":\"Vaughn\",\"suffix\":null,\"middle_name\":null,\"verified\":true,\"city\":\"West
+        Mckenzietown\",\"state\":\"IA\",\"county\":null,\"date_first_seen__raw\":{\"month\":\"2\",\"year\":\"2000\"},\"date_first_seen\":\"2000-02-01\",\"date_last_seen__raw\":{\"month\":\"3\",\"year\":\"1991\"},\"date_last_seen\":\"1991-03-01\",\"postal_code\":\"31339\",\"postal_code4\":\"9812\",\"phone_info\":{\"number_is_public\":false,\"phone_number\":\"1-344-008-8583x2559\"}}]}"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['1527']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"raw_response_str":"{\"order_id\":\"031f435f-208e-9dee-1281-3f6641e31711\",\"order\":{\"ssn\":\"291644989\",\"first_name\":\"Matthew\",\"last_name\":\"Vega\"},\"records\":[{\"street\":{\"name\":\"James
+      View\",\"number\":\"674\",\"suffix\":\"Summit\",\"post_direction\":null,\"pre_direction\":null},\"first_name\":\"Danielle\",\"last_name\":\"Vaughn\",\"suffix\":null,\"middle_name\":null,\"verified\":true,\"city\":\"West
+      Mckenzietown\",\"state\":\"IA\",\"county\":null,\"date_first_seen__raw\":{\"month\":\"2\",\"year\":\"2000\"},\"date_first_seen\":\"2000-02-01\",\"date_last_seen__raw\":{\"month\":\"3\",\"year\":\"1991\"},\"date_last_seen\":\"1991-03-01\",\"postal_code\":\"31339\",\"postal_code4\":\"9812\",\"phone_info\":{\"number_is_public\":false,\"phone_number\":\"1-344-008-8583x2559\"}}]}","response_str":"{\"addresses\":[{\"city\":\"West
+      Mckenzietown\",\"county\":null,\"state\":\"IA\",\"date_first_seen\":\"2000-02-01\",\"date_last_seen\":\"1991-03-01\",\"first_name\":\"Danielle\",\"last_name\":\"Vaughn\",\"middle_name\":null,\"postal_code\":\"31339\",\"postal_code_4\":\"9812\",\"is_verified\":true,\"street\":\"James
+      View\",\"number\":\"674\",\"post_direction\":null,\"pre_direction\":null,\"suffix\":\"Summit\"}],\"phones\":[{\"number\":\"1-344-008-8583x2559\",\"is_public\":false}]}","source":"bgc.us_one_trace","created_at":"2018-08-27T10:40:42.739283","task_id":"7a341a8a-8b0f-49df-9fc8-265535b941c4"}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/sub_profile/doc/bgc_us_one_trace_123456789
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"bgc_us_one_trace_123456789","_version":5,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":207,"_primary_term":6}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['185']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"meta_sub_profiles":[{"sub_profile_id":"bgc_us_one_validate_123456789","status":"unknown"},{"sub_profile_id":"bgc_us_one_trace_123456789","status":"unknown"}]}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":64,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":66,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['172']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":64,"found":true,"_source":{"meta_sub_profiles":[{"sub_profile_id":"bgc_us_one_validate_123456789","status":"unknown"},{"sub_profile_id":"bgc_us_one_trace_123456789","status":"unknown"}]}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['258']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/bgc_us_one_validate_123456789
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"bgc_us_one_validate_123456789","_version":18,"found":true,"_source":{"raw_response_str":"{\"order_id\":\"f674a66a-45c1-d265-fa4a-25b43ea79596\",\"order\":{\"ssn\":\"549095763\"},\"is_deceased\":true,\"is_valid\":false,\"state_issued\":\"Ohio\",\"text_response\":\"Yeah
+        budget beyond learn apply institution enough we decade occur her production
+        test executive medical under.\",\"year_issued\":null}","response_str":"{\"ssn_trace\":{\"is_deceased\":true,\"is_random\":false,\"is_valid\":false,\"human_message\":\"Yeah
+        budget beyond learn apply institution enough we decade occur her production
+        test executive medical under.\",\"issued\":{\"date\":null,\"state\":\"Ohio\",\"year\":null},\"ssn\":\"549095763\"}}","source":"bgc.us_one_validate","created_at":"2018-08-27T10:40:42.640362","task_id":"1d0b43c0-c100-40fe-a4c9-1d991ddb49fd"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['878']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/sub_profile/doc/bgc_us_one_trace_123456789
+  response:
+    body: {string: '{"_index":"sub_profile","_type":"doc","_id":"bgc_us_one_trace_123456789","_version":5,"found":true,"_source":{"raw_response_str":"{\"order_id\":\"031f435f-208e-9dee-1281-3f6641e31711\",\"order\":{\"ssn\":\"291644989\",\"first_name\":\"Matthew\",\"last_name\":\"Vega\"},\"records\":[{\"street\":{\"name\":\"James
+        View\",\"number\":\"674\",\"suffix\":\"Summit\",\"post_direction\":null,\"pre_direction\":null},\"first_name\":\"Danielle\",\"last_name\":\"Vaughn\",\"suffix\":null,\"middle_name\":null,\"verified\":true,\"city\":\"West
+        Mckenzietown\",\"state\":\"IA\",\"county\":null,\"date_first_seen__raw\":{\"month\":\"2\",\"year\":\"2000\"},\"date_first_seen\":\"2000-02-01\",\"date_last_seen__raw\":{\"month\":\"3\",\"year\":\"1991\"},\"date_last_seen\":\"1991-03-01\",\"postal_code\":\"31339\",\"postal_code4\":\"9812\",\"phone_info\":{\"number_is_public\":false,\"phone_number\":\"1-344-008-8583x2559\"}}]}","response_str":"{\"addresses\":[{\"city\":\"West
+        Mckenzietown\",\"county\":null,\"state\":\"IA\",\"date_first_seen\":\"2000-02-01\",\"date_last_seen\":\"1991-03-01\",\"first_name\":\"Danielle\",\"last_name\":\"Vaughn\",\"middle_name\":null,\"postal_code\":\"31339\",\"postal_code_4\":\"9812\",\"is_verified\":true,\"street\":\"James
+        View\",\"number\":\"674\",\"post_direction\":null,\"pre_direction\":null,\"suffix\":\"Summit\"}],\"phones\":[{\"number\":\"1-344-008-8583x2559\",\"is_public\":false}]}","source":"bgc.us_one_trace","created_at":"2018-08-27T10:40:42.739283","task_id":"7a341a8a-8b0f-49df-9fc8-265535b941c4"}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['1533']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: '{"meta_sub_profiles":[{"sub_profile_id":"bgc_us_one_validate_123456789","status":"unknown"},{"sub_profile_id":"bgc_us_one_trace_123456789","status":"unknown"}],"ssn_trace":{"is_deceased":true,"is_random":false,"is_valid":false,"human_message":"Yeah
+      budget beyond learn apply institution enough we decade occur her production
+      test executive medical under.","issued":{"state":"Ohio"},"ssn":"549095763"},"addresses":[{"city":"West
+      Mckenzietown","county":null,"state":"IA","date_first_seen":"2000-02-01","date_last_seen":"1991-03-01","first_name":"Danielle","last_name":"Vaughn","middle_name":null,"postal_code":"31339","postal_code_4":"9812","is_verified":true,"street":"James
+      View","number":"674","post_direction":null,"pre_direction":null,"suffix":"Summit"}],"phones":[{"number":"1-344-008-8583x2559","is_public":false}]}'
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: PUT
+    uri: http://waifus/profile/doc/sub_profile_12345?version=64
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":65,"result":"updated","_shards":{"total":2,"successful":1,"failed":0},"_seq_no":67,"_primary_term":1}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['172']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      connection: [keep-alive]
+      content-type: [application/json]
+    method: GET
+    uri: http://waifus/profile/doc/sub_profile_12345
+  response:
+    body: {string: '{"_index":"profile","_type":"doc","_id":"sub_profile_12345","_version":65,"found":true,"_source":{"meta_sub_profiles":[{"sub_profile_id":"bgc_us_one_validate_123456789","status":"unknown"},{"sub_profile_id":"bgc_us_one_trace_123456789","status":"unknown"}],"ssn_trace":{"is_deceased":true,"is_random":false,"is_valid":false,"human_message":"Yeah
+        budget beyond learn apply institution enough we decade occur her production
+        test executive medical under.","issued":{"state":"Ohio"},"ssn":"549095763"},"addresses":[{"city":"West
+        Mckenzietown","county":null,"state":"IA","date_first_seen":"2000-02-01","date_last_seen":"1991-03-01","first_name":"Danielle","last_name":"Vaughn","middle_name":null,"postal_code":"31339","postal_code_4":"9812","is_verified":true,"street":"James
+        View","number":"674","post_direction":null,"pre_direction":null,"suffix":"Summit"}],"phones":[{"number":"1-344-008-8583x2559","is_public":false}]}}'}
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['918']
+      Content-Type: [application/json; charset=UTF-8]
+      Date: ['Mon, 27 Aug 2018 10:40:46 GMT']
+      Server: [nginx/1.12.2]
+    status: {code: 200, message: OK}
+version: 1
